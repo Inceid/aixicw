@@ -1,0 +1,103 @@
+@use "./variables.scss" as *;
+
+:root {
+  --content-measure: 760px;
+}
+
+body {
+  letter-spacing: 0.002em;
+}
+
+.center article {
+  max-width: var(--content-measure);
+}
+
+h1,
+h2,
+h3,
+.page-title {
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  line-height: 0.98;
+  margin-bottom: 1rem;
+}
+
+body[data-slug="index"] article h1 {
+  font-size: clamp(2.5rem, 6vw, 4.7rem);
+}
+
+h2 {
+  margin-top: 2.7rem;
+}
+
+p,
+li {
+  line-height: 1.72;
+}
+
+.eyebrow {
+  color: var(--secondary);
+  font-family: var(--headerFont);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.1rem;
+  text-transform: uppercase;
+}
+
+.card-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.4rem 0 2.5rem;
+}
+
+.course-card {
+  background: color-mix(in srgb, var(--light) 93%, var(--secondary));
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+  color: var(--darkgray);
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.15rem;
+  text-decoration: none;
+  transition: border-color 140ms ease, transform 140ms ease;
+}
+
+.course-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.course-card span {
+  color: var(--secondary);
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+}
+
+.course-card strong {
+  color: var(--dark);
+  font-family: var(--headerFont);
+  font-size: 1.08rem;
+}
+
+.course-card small {
+  line-height: 1.45;
+}
+
+table {
+  font-size: 0.92rem;
+}
+
+blockquote {
+  border-left-width: 3px;
+}
+
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
