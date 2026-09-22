@@ -2,7 +2,7 @@
 configuration:
   pageTitle: Beyond Chat
   pageTitleSuffix: " · Clinical AI"
-  baseurl: inceid.github.io/aixicw
+  baseUrl: inceid.github.io/aixicw
   enableSPA: true
   enablePopovers: true
   analytics: null
